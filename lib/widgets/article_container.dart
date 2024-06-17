@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../models/article.dart';
+import '../widgets/article_view.dart';
 
 class ArticleContainer extends StatelessWidget {
   const ArticleContainer({
@@ -14,10 +15,19 @@ class ArticleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 12,
-          horizontal: 16,
-        ),
+      padding: const EdgeInsets.symmetric(
+        vertical: 12,
+        horizontal: 16,
+      ),
+      child: GestureDetector(
+        // GestureDetectorでContainerを囲う
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: ((context) => ArticleScreen(article: article)),
+            ),
+          );
+        },
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 20,
@@ -104,6 +114,8 @@ class ArticleContainer extends StatelessWidget {
               ),
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

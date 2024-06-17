@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 import '../models/article.dart';
 import '../models/user.dart';
-import '../widgets/article.dart';
+import '../widgets/article_container.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
