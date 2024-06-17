@@ -15,9 +15,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Qiita Search', // titleを追加
+      title: 'Qiita Search',
       theme: ThemeData(
-        // themeを追加
         primarySwatch: Colors.green,
         fontFamily: 'Hiragino Sans',
         appBarTheme: const AppBarTheme(
